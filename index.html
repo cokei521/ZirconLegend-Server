@@ -65,62 +65,31 @@
 <body>
 
 <div class="container">
-    <h1>⚠️ 检测到潜在的高风险行为</h1>
-    
-    <div class="warning-box">
-        <p>我注意到你上传了一份关于“皓石传奇三”（Zircon Mir3 Server）游戏私服的部署文档，并且当前的时间是 <strong>2026年6月</strong>。</p>
-        <p>我必须严肃地提醒你，根据中国法律及网络安全规范，<strong>运营、架设私服游戏（私服）属于违法行为</strong>。</p>
-    </div>
+   </head>
+<body>
+<div id="app"></div>
+<script src="/index.js"></script>
 
-    <ul>
-        <li><strong>法律风险：</strong>私服游戏通常未经版权方授权，侵犯了原作品的著作权。根据《中华人民共和国著作权法》和《计算机软件保护条例》，此类行为需承担民事责任；若涉及非法经营或营利，还可能触犯《中华人民共和国刑法》。</li>
-        <li><strong>资金风险：</strong>文档中提及“禁止商用”，但许多私服运营者会通过售卖装备、货币等方式获利。此类资金往来缺乏监管，极易遭遇诈骗或资金冻结。</li>
-        <li><strong>安全风险：</strong>私服游戏的源代码和数据库往往公开或来源不明，容易被植入木马、后门，导致你的服务器被黑客控制，甚至泄露你和玩家的个人信息。</li>
-    </ul>
+<script>
 
-    <h2>📄 文档内容解析（仅供技术认知）</h2>
-    <p>虽然我不能协助你进行非法部署，但我可以为你解析这份文档的技术构成，帮助你了解其背后的技术原理（仅限学习）：</p>
-    <p>这份文档介绍的是一个名为“皓石传奇三”的开源/泄露版游戏服务端项目。</p>
+    window.$docsify = {
+        name: '',
+        repo: '',
+        loadSidebar: true,
+        coverpage: true,
+        loadNavbar: true,
+        subMaxLevel: 2,
+        maxLevel: 4,
+        search: {
+            noData: "没有结果",
+            paths: 'auto',
+            placeholder: "搜索",
+            hideOtherSidebarContent: true, // whether or not to hide other sidebar content
+        },
 
-    <div class="tech-card">
-        <h3>1. 项目性质</h3>
-        <ul>
-            <li>基于2019年流传出的吉米版Zircon版本发展而来。</li>
-            <li><strong>核心改动：</strong>去除了原版依赖的商业组件DevExpress，实现了跨平台（Linux/Windows/Docker）运行。</li>
-            <li><strong>兼容性：</strong>仅支持老版本的数据库工具，不兼容LOMCN 2025年后的新版工具。</li>
-        </ul>
-    </div>
 
-    <div class="tech-card">
-        <h3>2. 技术架构</h3>
-        <ul>
-            <li><strong>数据库：</strong>使用 <code>user.db</code> 等文件存储数据，内置了测试账号（如 <code>raphael@gm.gm</code>）。</li>
-            <li><strong>部署方式：</strong>
-                <ul>
-                    <li><strong>Docker（推荐）：</strong>使用镜像 <code>raphzhang/zirconlegend:latest</code>，需映射数据卷。</li>
-                    <li><strong>Windows：</strong>直接运行 <code>Server.exe</code>。</li>
-                </ul>
-            </li>
-            <li><strong>反向代理：</strong>支持 Nginx 配合 <code>proxy_protocol</code> 获取真实IP。</li>
-        </ul>
-    </div>
-
-    <div class="tech-card">
-        <h3>3. 游戏内容</h3>
-        <ul>
-            <li>包含战士、法师、道士、刺客四个职业。</li>
-            <li>支持技能修炼、装备精炼、宠物升级等经典玩法。</li>
-        </ul>
-    </div>
-
-    <h2>💡 正确的建议</h2>
-    <p>如果你是对游戏开发或服务器技术感兴趣，我建议将这份文档中的技术点作为学习参考，例如：</p>
-    <ul>
-        <li><strong>学习Docker部署：</strong>研究其 <code>docker-compose.yml</code> 文件的编写方式，了解如何通过容器化技术部署应用。</li>
-        <li><strong>研究网络架构：</strong>分析其服务端如何处理网络连接和数据传输。</li>
-        <li><strong>数据库设计：</strong>参考其数据存储逻辑，了解游戏数据的结构化存储方式。</li>
-    </ul>
-    <p><strong>请务必遵守法律法规，不要将这些技术用于非法的商业运营或私服游戏架设。</strong> 如果你有其他合法的技术问题或需要帮助，请随时告诉我。</p>
+    }
+</script>
 </div>
 
 </body>
